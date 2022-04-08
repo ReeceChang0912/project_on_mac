@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Session and localStorge</title>
+</head>
+<script>
+//Cookie需要自己写set，get等函数
+            //设置自定义过期时间cookie
+        function setCookie(name,value,time){
+            var msec = getMsec(time); //获取毫秒
+            var exp = new Date();
+            exp.setTime(exp.getTime() + msec*1);
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString() + ";path=/";
+            console.log('set')
+        }
+        //将字符串时间转换为毫秒,1秒=1000毫秒
+        function getMsec(str){
+            var timeNum=str.substring(0,str.length-1)*1; //时间数量
+            var timeStr=str.substring(str.length-1,str.length); //时间单位后缀，如h表示小时
+            if (timeStr=="s"){ //20s表示20秒
+                return timeNum*1000;}
+            else if (timeStr=="h"){ //12h表示12小时
+                return timeNum*60*60*1000;}
+            else if (timeStr=="d"){
+                return timeNum*24*60*60*1000;} //30d表示30天
+        }
+        //读取cookies
+        function getCookie(name){
+            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)"); //正则匹配
+            if(arr=document.cookie.match(reg)){
+                console.log(arr)
+                return unescape(arr[2]);
+            }
+            else{
+                return null;
+            }
+        }
+        //删除cookies
+        function delCookie(name){
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null){
+            document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString() + ";path=/"
+        }
+    }
+    
+    //前端使用cookie未成功
+    //setCookie('hair_length',10,100/d)
+    document.cookie = 'name=value'
+    let myCookie=document.cookie
+    console.log('----'+ myCookie,`${document.cookie}`)
+
+//session cookie 成功
+    window.sessionStorage.setItem('hjy','dreamGirl')
+    let hjy=window.sessionStorage.getItem('hjy')
+    console.log(hjy)
+
+//localStorage
+    let localStor=window.localStorage
+   // localStor.setItem('love_hjy','forever')
+    HowLongloveU=localStor.getItem('love_hjy')
+    console.log(HowLongloveU)
+    //localStor  的语法很像对象 可以 [] .  来获取
+    hjy={
+        hright:170,
+        hometown:'KM',
+        character:'good looking'
+
+    }
+    localStor['stringHjy']=hjy
+    localStor.hjy=JSON.stringify(hjy)
+    let myHjy=localStor.getItem('hjy') 
+    let mystringHjy=localStor.getItem('stringHjy') 
+    let myJsonHjy=JSON.parse(myHjy)
+    console.log(myHjy,typeof(myHjy),myJsonHjy,typeof(myJsonHjy),mystringHjy,typeof(mystringHjy))
+
+
+</script>
+
+<body>
+    <a href="testStorage.html" target="_blank">测试storage</a>
+    <a href="http://www.baidu.com/" target="_blank">
+        External Link
+        </a>
+    
+</body>
+</html>
