@@ -1,0 +1,6 @@
+2022-04-12 16:44:36,882 INFO 12773 [egg-schedule]: register schedule /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-04-12 16:44:36,882 INFO 12773 [egg-schedule]: register schedule /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-04-12 16:44:36,882 INFO 12773 [egg-schedule]: register schedule /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-04-12 16:44:37,213 INFO 12773 [Timer] /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 42322791ms at 2022-04-13 04:30:00.004
+2022-04-12 16:44:37,214 INFO 12773 [Timer] /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 26122786ms at 2022-04-13 00:00:00.000
+2022-04-12 16:44:37,214 INFO 12773 [Timer] /Users/liwentao/ChangRui/project_on_mac/myEgg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 26123786ms at 2022-04-13 00:00:01.000

@@ -1,0 +1,14 @@
+2022-04-12 16:44:36,874 INFO 12773 [egg:logger] init all loggers with options: {"dir":"/Users/liwentao/ChangRui/project_on_mac/myEgg/logs/egg","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-04-12 16:44:36,883 INFO 12773 [egg-multipart] stream mode enable
+2022-04-12 16:44:37,145 INFO 12773 [egg-static] starting static serve /public/ -> /Users/liwentao/ChangRui/project_on_mac/myEgg/app/public
+2022-04-12 16:44:37,150 INFO 12773 [egg-security] use csrf middleware
+2022-04-12 16:44:37,153 INFO 12773 [egg-security] use methodnoallow middleware
+2022-04-12 16:44:37,156 INFO 12773 [egg-security] use noopen middleware
+2022-04-12 16:44:37,168 INFO 12773 [egg-security] use nosniff middleware
+2022-04-12 16:44:37,170 INFO 12773 [egg-security] use xssProtection middleware
+2022-04-12 16:44:37,173 INFO 12773 [egg-security] use xframe middleware
+2022-04-12 16:44:37,174 INFO 12773 [egg-security] use dta middleware
+2022-04-12 16:44:37,174 INFO 12773 [egg-security] compose 7 middlewares into one security middleware
+2022-04-12 16:44:37,189 INFO 12773 [egg:core] dump config after load, 4ms
+2022-04-12 16:44:37,203 INFO 12773 [egg-watcher:application] watcher start success
+2022-04-12 16:44:37,208 INFO 12773 [egg:core] dump config after ready, 4ms
